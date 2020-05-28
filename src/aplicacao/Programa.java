@@ -16,7 +16,7 @@ public class Programa {
 		nome = sc.nextLine();
 		System.out.print("Sexo: ");
 		sexo = sc.next();
-			if (!"F".equals(sexo) || !"M".equals(sexo)) {
+			while  ((!sexo.equals("F")) && (!sexo.equals("M"))) {
 				System.out.print("Informe o sexo no formato F ou M: ");
 				sexo = sc.next();	
 			}
