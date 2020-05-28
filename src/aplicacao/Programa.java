@@ -22,13 +22,13 @@ public class Programa {
 			}
 		System.out.print("Altura: ");
 		altura = sc.nextDouble();
-			while (altura < 1.0) {
+			while (altura < 0) {
 				System.out.print("Informe altura valida: ");
 				altura = sc.nextDouble();
 			}
 		System.out.print("Peso: ");
 		peso = sc.nextDouble();
-			while (peso < 30.0) {
+			while (peso < 0) {
 				System.out.print("Informe peso valido: ");
 				peso = sc.nextDouble();
 			}
