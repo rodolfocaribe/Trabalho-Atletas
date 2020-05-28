@@ -8,18 +8,17 @@ public class Programa {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		String nome;
-		char sexo, resposta;
+		String nome, sexo, resposta;
 		double altura, peso;
 
 		do {
 		System.out.print("NOME: ");
 		nome = sc.nextLine();
 		System.out.print("Sexo: ");
-		sexo = sc.next().charAt(0);
-			if (sexo !='F' || sexo !='M') {
+		sexo = sc.next();
+			if (!"F".equals(sexo) || !"M".equals(sexo)) {
 				System.out.print("Informe o sexo no formato F ou M: ");
-				sexo = sc.next().charAt(0);	
+				sexo = sc.next();	
 			}
 		System.out.print("Altura: ");
 		altura = sc.nextDouble();
@@ -34,15 +33,27 @@ public class Programa {
 				peso = sc.nextDouble();
 			}
 		System.out.print("Digitar outro atleta (S/N)?: ");
-		resposta = sc.next().charAt(0);
-		if (resposta == 'S') {
-			sc.nextLine(); 
+		resposta = sc.next();
+		if ("S".equals(resposta)) {
+			sc.nextLine();
+			sc.nextLine();
 		}
 		
 		
-		} while (resposta == 'S' );
+		} while ("S".equals(resposta));
 			 		
 		sc.close();
+		System.out.println();
+		System.out.println();
+		System.out.println("RELATÓRIO: ");
+		System.out.printf("Peso médio dos atletas: %.2f%n", peso);
+		System.out.println("O Atleta mais alto é: " + nome);
+		System.out.println("A porcentagem de homens é: %.1f%n");
+		System.out.println("A altura média das mulheres é: ");
+		System.out.println();
+		System.out.println("FIM DO PROGRAMA!");
+		
+		
 	
 	}
 }
